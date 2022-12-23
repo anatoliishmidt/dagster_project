@@ -1,0 +1,10 @@
+apiVersion: v2
+name: dagster
+description: A Helm chart for Kubernetes
+type: application
+version: 0.1.0
+appVersion: "1.0"
+dependencies:
+- name: dagster
+  version: 1.1.7
+  repository: 'https://dagster-io.github.io/helm'
