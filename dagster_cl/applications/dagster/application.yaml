@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dagster
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  labels:
+    type: Infra
+spec:
+  project: default
+  destination:
+    name: dagster_cl
+    namespace: dagster
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
+  source:
+    repoURL: 'git@github.com:anatoliishmidt/dagster_project.git'
+    path: dagster_cl/configuration/dagster
+    targetRevision: main
+    helm:
+      valueFiles:
+      - values.yaml
+      passCredentials: true
