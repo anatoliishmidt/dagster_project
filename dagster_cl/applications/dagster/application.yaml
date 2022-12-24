@@ -10,7 +10,7 @@ metadata:
 spec:
   project: default
   destination:
-    name: dagster_cl
+    name: in-cluster
     namespace: dagster
   syncPolicy:
     syncOptions:
