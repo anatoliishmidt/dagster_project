@@ -9,6 +9,7 @@ minikube start --kubernetes-version=v.1.19.15
 # # # install argocd
 kubectl create ns argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -n argocd -f argorepo.yaml
 
 # # # deploy dagster in argocd
 kubectl apply -k ./dagster_cl/applications/
