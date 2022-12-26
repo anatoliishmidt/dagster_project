@@ -22,6 +22,8 @@ do
             kubectl create ns argocd
             kubectl apply -n argocd -f argocd.yaml
             kubectl rollout status deployment argocd-server -n argocd --timeout=90s
+            kubectl rollout status deployment argocd-repo-server -n argocd --timeout=90s
+            kubectl rollout status deployment argocd-applicationset-controller -n argocd --timeout=90s
             kubectl apply -n argocd -f argorepo.yaml
             ;;
         d)
@@ -31,6 +33,7 @@ do
         r)
             kubectl delete -k ./dagster_cl/applications/
             kubectl delete -n argocd -f argocd.yaml
+            kubectl delete ns argocd
             ;;
         h)
             echo """
