@@ -8,7 +8,7 @@ Minikube and AWS EKS - tech stack to run k8s cluster (from the requirements of t
 Terraform - Infrastructure as a code is inportant part of managing infrastructure. I use this method to automate all processes.
 
 ArgoCD - GitOps approach to manage kubernetes deployments and applications as a code and store it in git. I use this method to automate all processes. Also it is easy to manage versions of helm chart. This allows us to use all benefits of GitOps methodology.
-> Short remark - in current process we dont have build step (build application or docker image), but we can do it using Argo workflows or any other ci tool (jenkins, github actions etc). So in this case our flow will look like: Argo workflows - builds and puhs to git our code/applications, argoCD - deploys and manages k8s things. Of course using webhooks and automate all jobs.
+> Short remark - in current process we dont have build step (build application or docker image), but we can do it using Argo workflows or any other ci tool (jenkins, github actions etc). So in this case our flow will look like: Argo workflows - builds and puhs to git our code/applications and docker images to the registry, argoCD - deploys and manages k8s things. Of course using webhooks and automate all jobs.
 
 Helm - helps us to manage Kubernetes applications (from the requirements of the task).
 
