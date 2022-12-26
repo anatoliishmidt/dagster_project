@@ -27,7 +27,7 @@ terraform - to work with IaC and AWS.
 Configured AWS account with aws-cli access and aws-cli installed - Here I am not specifying anything specific as access can be different. It depends on each team and person (iam role or user etc.).
 
 MacOS - in case with installing helm and minukube.
-> If you want to run it on the laptop it should be MacOS(from the requirements of the task). Script can install
+> If you want to run it on the laptop it should be MacOS(from the requirements of the task).
 
 
 ## Deploy demo using demo.sh
@@ -72,4 +72,4 @@ I did not configure load balancers and security things. Because of it is demo an
 
 To access any endpoint from k8s cluster, please use `kubectl port-forward`. 
 
-As a perspective we can scale all deployments with few replicas to save us from down time and to be HighLoaded. ServiceAccounts of Argocd and Dagster were configured from the helm. Of course we can manage this access using K8s Rbac and AWS IAM(with tokens). All benefits of cloud based infrastructure and infrastructure as a code are allowed us to configure any disaster revcovery - clound availability zones, replications of db and application as a code/infrastructure as code which allow us to deploy all project in few minutes. Also good to have artifactory storage to store and manage helm charts, docker images.
+As a perspective we can scale all deployments with few replicas to save us from down time and to be HighLoaded. ServiceAccounts of Argocd and Dagster were configured from the helm. Of course we can manage this access using K8s Rbac and AWS IAM(with tokens). All benefits of cloud based infrastructure and infrastructure as a code are allowed us to configure any disaster revcovery - cloud availability zones, replications of db and application as a code/infrastructure as code which allow us to deploy all project in few minutes. Also good to have artifactory storage to store and manage helm charts, docker images.
