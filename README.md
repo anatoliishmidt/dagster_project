@@ -89,3 +89,6 @@ As a perspective we can scale all deployments with few replicas to save us from 
 ## There is an example of dagster test run:
 
 ![alt text](./example_of_run.png)
+
+## Conclusion
+This demo is not intended for use in production with real cases. There are a lot of things and processes what should be improved and adapted to real cases.
