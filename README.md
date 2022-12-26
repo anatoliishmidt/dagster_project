@@ -17,6 +17,18 @@ Dagster(from the requirements of the task) - Honestly, I'm not familiar with thi
 ### demo.sh
 This script consist of commands for MacOS. You can use it to install helm, minikube on your MacOS and deploy argocd and dagster in k8s cluster.
 
+## Directories
+
+eks - directory with terraform code to deploy aws eks cluster.
+
+dagster_cl - directory with argocd applications. In this directory we can manage our deployments as a code (gitops). If you like to change or update dagster helm chart - you should do it in this directory/application - and after your push to main(PR as best practise) dagster will be updated.
+
+argocd.yaml - deployment of argocd tool.
+
+argorepo.yaml - repository with our code. Consists of url and test ssh key to have the access. It is bad example to store ssh key here etc (I know it). But to simply provide you access to this demo I did it. I dont have any important info here. In other case to manage access we can use keyvault and private repository.
+
+
+
 ## Prerequisites
 Helm - v3.4.2
 
